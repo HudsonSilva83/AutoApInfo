@@ -40,4 +40,4 @@ jobs:
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
         run: |
-          python path/to/your_script.py  # Ajuste o caminho para o seu script Python
+          python AutoApInfo/apInfo.py
