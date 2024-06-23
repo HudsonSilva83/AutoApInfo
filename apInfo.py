@@ -12,11 +12,11 @@ from email.mime.multipart import MIMEMultipart
 # driver = webdriver.Chrome()
 
 # Inicialize o driver do Chrome
-options = webdriver.ChromeOptions()
-#options = webdriver.FirefoxOptions()
+# options = webdriver.ChromeOptions()
+options = webdriver.FirefoxOptions()
 options.add_argument('--headless')  # Executar em modo headless (sem interface gráfica)
-driver = webdriver.Chrome(options=options)
-#driver = webdriver.Firefox(options=options)
+# driver = webdriver.Chrome(options=options)
+driver = webdriver.Firefox(options=options)
 
 
 
