@@ -46,11 +46,19 @@ smtp_server = 'smtp.gmail.com'
 smtp_port = 587  # Porta para TLS
 
 # Informações da conta de email
-sender_email = 't800.hma@gmail.com'
-sender_password = 'lqceveoatljdctvm'  # Recomenda-se usar variáveis de ambiente para senhas
+import os
 
+# Informações da conta de email
+sender_email = os.getenv('SENDER_EMAIL')
+sender_password = os.getenv('SENDER_PASSWORD')
+receiver_email = os.getenv('RECEIVER_EMAIL')
+
+
+
+#sender_email = 't800.hma@gmail.com'
+#sender_password = 'lqceveoatljdctvm'  # Recomenda-se usar variáveis de ambiente para senhas
 # Destinatário
-receiver_email = 'hu.psilva@gmail.com'
+#receiver_email = 'hu.psilva@gmail.com'
 
 # Mensagem de email
 message = MIMEMultipart()

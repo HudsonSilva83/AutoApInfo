@@ -1,0 +1,43 @@
+name: Selenium Web Scraper
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Executa a cada 5 minutos
+  push:
+    branches:
+      - main  # Ajuste conforme seu branch principal
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Especifique a versão do Python que você está usando
+
+      - name: Install dependencies
+        run: |
+          pip install selenium
+          pip install beautifulsoup4
+
+      - name: Install Chrome WebDriver
+        run: |
+          LATEST=$(wget -q -O - https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Run Python script
+        env:
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: |
+          python path/to/your_script.py  # Ajuste o caminho para o seu script Python
