@@ -3,7 +3,7 @@ name: Automacao ApVerify
 on:
   push:
     branches:
-      - main  # ajuste conforme sua branch principal
+      - master  # ajuste conforme sua branch principal
   schedule:
     - cron: '*/2 * * * *'  # Executa a cada dois minutos
 # on:
