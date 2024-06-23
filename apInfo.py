@@ -47,7 +47,7 @@ texto = elemento.text
 # Imprima o texto
 #numero = int(texto[8])
 y = slice(5,8)
-numero = (valorTexto[y])
+numero = (texto[y])
 numero = int(numero)
 
 
