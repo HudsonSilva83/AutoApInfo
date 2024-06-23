@@ -12,10 +12,7 @@ on:
   schedule:
     - cron: '*/2 * * * *'  # Executa a cada dois minutos
     
-  push:
-    branches:
-      - main  # Ajuste conforme seu branch principal
-
+  
 jobs:
   build:
 
