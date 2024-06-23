@@ -2,7 +2,7 @@ name: Automacao ApVerify
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Executa a cada dois minutos
+    - cron: '*/2 * * * *'  # Executa a cada dois minutos
     
   push:
     branches:
