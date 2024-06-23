@@ -45,7 +45,11 @@ valorNum = int(sovalor)
 texto = elemento.text
 
 # Imprima o texto
-numero = int(texto[8])
+#numero = int(texto[8])
+numero =int(texto)
+y = slice(5,8)
+numero = (valorTexto[y])
+
 print(numero)
 # Feche o navegador
 driver.quit()
