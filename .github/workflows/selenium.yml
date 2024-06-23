@@ -5,7 +5,7 @@ on:
     branches:
       - master  # ajuste conforme sua branch principal
   schedule:
-    - cron: '0 9,14,19 * * *'  # Executa às 9:00, 14:00 e 19:00 (horário local)
+    - cron: '*/30 * * * *'  # Executa a cada 30 minutos
 jobs:
   build:
 
