@@ -46,6 +46,7 @@ texto = elemento.text
 
 # Imprima o texto
 numero = int(texto[5])
+print(numero)
 # Feche o navegador
 driver.quit()
 
