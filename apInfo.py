@@ -46,9 +46,11 @@ texto = elemento.text
 
 # Imprima o texto
 #numero = int(texto[8])
-numero =int(texto)
 y = slice(5,8)
 numero = (valorTexto[y])
+numero = int(numero)
+
+
 
 print(numero)
 # Feche o navegador
