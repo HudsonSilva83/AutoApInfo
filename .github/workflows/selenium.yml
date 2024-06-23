@@ -1,9 +1,16 @@
 name: Automacao ApVerify
 
+# on:
+#   schedule:
+#     - cron: '*/2 * * * *'  # Executa a cada dois minutos
+#     # - cron: '0 9,14,19 * * *'  # Executa às 9:00, 14:00 e 19:00 (horário local)
+
 on:
+  push:
+    branches:
+      - main  # ajuste conforme sua branch principal
   schedule:
     - cron: '*/2 * * * *'  # Executa a cada dois minutos
-    # - cron: '0 9,14,19 * * *'  # Executa às 9:00, 14:00 e 19:00 (horário local)
     
   push:
     branches:
