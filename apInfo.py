@@ -28,12 +28,11 @@ driver.get(url)
 
 # Aguarde até que o elemento esteja visível
 
-elemento = WebDriverWait(driver, 10).until(
+elemento = WebDriverWait(driver, 20).until(
     EC.visibility_of_element_located((By.CSS_SELECTOR, "div.lead-numbers p"))
 )
 
-
-valor = WebDriverWait(driver, 10).until(
+valor = WebDriverWait(driver, 20).until(
     EC.visibility_of_element_located((By.XPATH, "//*[@id='js-site-main']/div[2]/div[2]/div[1]/div/div[1]/div/h3"))
 )
 
