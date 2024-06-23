@@ -45,7 +45,7 @@ valorNum = int(sovalor)
 texto = elemento.text
 
 # Imprima o texto
-numero = int(texto[5])
+numero = int(texto[8])
 print(numero)
 # Feche o navegador
 driver.quit()
