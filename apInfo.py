@@ -9,7 +9,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Inicialize o driver do Chrome (ou qualquer outro navegador)
-driver = webdriver.Chrome()
+# Inicialize o driver do Chrome
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')  # Executar em modo headless (sem interface gráfica)
+driver = webdriver.Chrome(options=options)
+
+# driver = webdriver.Chrome()
 
 # URL da página da web que você deseja acessar
 url = 'https://www.vivareal.com.br/imovel/apartamento-2-quartos-mantiqueira-bairros-belo-horizonte-com-garagem-68m2-venda-RS260000-id-2661505559/'

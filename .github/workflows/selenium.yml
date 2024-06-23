@@ -35,6 +35,7 @@ jobs:
           sudo mv chromedriver /usr/local/bin/
           sudo chmod +x /usr/local/bin/chromedriver
 
+
       - name: Run Python script
         env:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
