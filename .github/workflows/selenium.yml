@@ -23,17 +23,24 @@ jobs:
           python-version: '3.x'  # Especifique a versão do Python que você está usando
 
       - name: Install dependencies
-        run: |
+        run:
           pip install selenium
           pip install beautifulsoup4
 
-      - name: Install Chrome WebDriver
-        run: |
-          LATEST=$(wget -q -O - https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
+      - name: Instalar o driver do Firefox (geckodriver)
+        run:
+          wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+          tar -xzf geckodriver-v0.30.0-linux64.tar.gz
+          sudo mv geckodriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/geckodriver    
+
+      # - name: Install Chrome WebDriver
+      #   run: |
+      #     LATEST=$(wget -q -O - https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+      #     wget https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+      #     unzip chromedriver_linux64.zip
+      #     sudo mv chromedriver /usr/local/bin/
+      #     sudo chmod +x /usr/local/bin/chromedriver
 
 
       - name: Run Python script
