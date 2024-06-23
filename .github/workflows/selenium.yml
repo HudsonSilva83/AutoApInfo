@@ -1,4 +1,4 @@
-name: Selenium Web Scraper
+name: Automacao ApVerify
 
 on:
   schedule:
@@ -40,4 +40,4 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
-        run: python AutoApInfo/apInfo.py
+        run: python apInfo.py
