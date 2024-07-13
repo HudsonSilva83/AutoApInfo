@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master  # ajuste conforme sua branch principal
-  schedule:
-    - cron: '0 */3 * * *'  # Executa a cada 3 horas
+  # schedule:
+    # - cron: '0 */3 * * *'  # Executa a cada 3 horas
 jobs:
   build:
 
